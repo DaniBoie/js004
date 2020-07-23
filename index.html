@@ -12,11 +12,7 @@
 
 <body>
 
-  <div id="paste">
-    <ul class="list-group" id="songs">
-
-    </ul>
-  </div>
+  
 
 
 
@@ -28,12 +24,17 @@
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <script>
 
-    favorites = ['Power Freaks', 'Out of My Mind', 'Younger', 'Big Fat Mouth', 'Cleaner Air','Something Good Can Work', 'BALD!', 'Blinding Lights', 'Live at the Swamp', 'Cronenberg']
+    let songs = ['Power Freaks', 'Out of My Mind', 'Younger', 'Big Fat Mouth', 'Cleaner Air','Something Good Can Work', 'BALD!', 'Blinding Lights', 'Live at the Swamp', 'Cronenberg']
+    let sports = ['football', 'baseball', 'basketball', 'soccer', 'gymnastics', 'hockey', 'volleyball', 'tennis', 'swimming', 'running']
+    let movies = ['Toy Story 4', 'Crazy Rich Asians', 'Braveheart', 'Joker', 'La La Land', 'Wolf of Wallstreet', 'Peanut Butter Falcon', 'Good Boys', 'Space Jam', 'Remember The Titans']
+    let games = ['Zelda', 'League of Legends', 'Bloodborne', 'Monster Hunter', 'Crash Bandicoot', 'Pokemon', 'Maplestory', 'God of War', 'Super Smash', 'Warframe']
 
-    for (let i = 0; i < favorites.length; i++) {
+
+
+    for (let i = 0; i < songs.length; i++) {
       let songElem = document.createElement('li')
       songElem.className = 'list-group-item'
-      songElem.textContent = favorites[i]
+      songElem.textContent = songs[i]
       document.getElementById('songs').append(songElem)
     }
 

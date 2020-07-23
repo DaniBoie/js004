@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    h1 {
+      text-align: center;
+    }
+    #mainForm {
+      text-align: center;
+    }
+    .boxStyling {
+      text-align: center;
+      background-color: blanchedalmond;
+      padding: 8px;
+      border: solid black;
+      margin-top: 5px;
+
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Favorite Sports!</h1>
+
+  <form id = "mainForm">
+    <p>
+      <label for="sport">Sport: </label>
+      <input type="sport" name="sport" id="sport">
+    </p>
+    <p>
+      <label for="numOfP">Number of Players: </label>
+      <input type="numOfP" name="numOfP" id="numOfP">
+    </p>
+    <p>
+      <label for="tSport">Is it a team sport?</label>
+      <input type="tSport" name="tSport" id="tSport">
+    </p>
+    <p>
+      <label for="sUnit">What is the unit of score?</label>
+      <input type="sUnit" name="sUnit" id="sUnit">
+    </p>
+    <p>
+      <label for="avgLen">Average Length:</label>
+      <input type="avgLen" name="avgLen" id="avgLen">
+    </p>
+    <p>
+      <button id="submit">Submit Responses</button>
+    </p>
+  </form>
+
+  <div id="sportInfo">
+    
+  </div>
+
+
+
+  <script>
+
+    document.getElementById('submit').addEventListener('click', (event) => {
+      
+      event.preventDefault()
+  
+      let submitDiv = document.createElement('div')
+      submitDiv.className = ('boxStyling')
+      submitDiv.innerHTML = (`
+      <p>Sport Name: ${document.getElementById('sport').value}</p>
+      <p>Number of Players: ${ document.getElementById('numOfP').value }</p>
+      <p>Is it a Team Sport ?: ${ document.getElementById('tSport').value }</p>
+      <p>What is the Unit of Score ?: ${ document.getElementById('sUnit').value }</p>
+      <p>Average Length of Sport ?: ${ document.getElementById('avgLen').value }</p>
+      `)      
+    
+      document.getElementById('sportInfo').append(submitDiv)
+
+      document.getElementById('sport').value = ' '
+      document.getElementById('numOfP').value = ' '
+      document.getElementById('tSport').value = ' '
+      document.getElementById('sUnit').value = ' '
+      document.getElementById('avgLen').value = ' '
+    })
+
+  </script>
+</body>
+
+</html>
