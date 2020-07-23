@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <button id="btn">Add</button>
+  <button id="btn2">Subtract</button>
+
+  <div id="content"></div>
+
+  <script>
+
+    let counter = 0
+    let number = document.createElement('p')
+    number.textContent = (`${counter}`)
+    document.getElementById('content').append(number)
+
+    document.getElementById('btn').addEventListener('click', () => {
+      counter++
+      number.innerHTML = `${counter}`
+      document.getElementById('content').append(number)
+    })
+
+    document.getElementById('btn2').addEventListener('click', () => {
+      counter--
+      number.innerHTML = `${counter}`
+      document.getElementById('content').append(number)
+    })
+
+  </script>
+</body>
+
+</html>
